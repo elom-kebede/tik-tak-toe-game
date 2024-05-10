@@ -6,14 +6,20 @@ body{
     font-family: "Merriweather Sans", sans-serif;
     color:#4c6986;
 }
+
+.title {
+    max-width: 500px;
+}
+
 .wrapper {
     max-width: 1440px;
     height: 800px;
     /* background-color: yellow; */
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     margin: 0 auto;
+    padding: 40px;
 
 } 
 
@@ -67,6 +73,15 @@ h1 {
     padding-bottom: 8px;
 }
 
+.player-x.active {
+    color:#42BED7;
+    border-color:#42BED7;
+} 
+.player-o.active {
+    color:#D7BAFB;
+    border-color:#D7BAFB;
+} 
+
 .board {
     /* background-color: yellow; */
     display: grid;
@@ -97,3 +112,26 @@ h1 {
 .board-tile:hover {
     background-color: #eee;
 }
+
+.tile-x {
+    color:#42BED7;
+}
+
+.tile-o {
+    color:#D7BAFB
+}
+
+.tile-winner span{
+    color:#23CE6B
+}
+
+@media only screen and (max-width : 1200px) {
+    .wrapper {
+        flex-direction: column
+    }
+
+    .left {
+        margin-bottom:50px;
+    }
+}
+
